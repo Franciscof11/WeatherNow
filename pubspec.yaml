@@ -27,3 +27,8 @@ flutter:
 
   assets:
     - assets/
+
+  fonts:
+    - family: SFpro
+      fonts:
+        - asset: assets/fonts/font.OTF
