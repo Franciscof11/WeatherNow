@@ -44,7 +44,7 @@ class HomePage extends StatelessWidget {
                         SvgPicture.asset('assets/Icons/location_icon.svg'),
                         SizedBox(width: 8),
                         Text(
-                          'Fortaleza',
+                          'Maranhão',
                           style: style,
                         ),
                         SizedBox(width: 2),
@@ -53,11 +53,12 @@ class HomePage extends StatelessWidget {
                           width: 35,
                         ),
                         SizedBox(width: 150),
-                        SvgPicture.asset(
-                          'assets/Icons/notification_icon.svg',
-                        ),
+                        SvgPicture.asset('assets/Icons/notification_icon.svg'),
                       ],
-                    )
+                    ),
+                    SizedBox(height: 40),
+                    SvgPicture.asset('assets/Images/sun_cloud.svg'),
+                    SizedBox(height: 40),
                   ],
                 ),
               ),
