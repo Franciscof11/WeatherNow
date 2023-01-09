@@ -14,6 +14,7 @@ class HomePage extends StatelessWidget {
       fontSize: 18,
       fontWeight: FontWeight.w600,
       color: Colors.white,
+      fontFamily: 'SFpro',
     );
     return Scaffold(
       body: Container(
@@ -36,23 +37,24 @@ class HomePage extends StatelessWidget {
                 width: double.infinity,
                 child: Column(
                   children: [
+                    SizedBox(height: 35),
                     Row(
                       children: [
                         SizedBox(width: 25),
-                        SvgPicture.asset('assets/location_icon.svg'),
+                        SvgPicture.asset('assets/Icons/location_icon.svg'),
                         SizedBox(width: 8),
                         Text(
-                          'Maranhão',
+                          'Fortaleza',
                           style: style,
                         ),
                         SizedBox(width: 2),
                         SvgPicture.asset(
-                          'assets/dropdown_icon.svg',
+                          'assets/Icons/dropdown_icon.svg',
                           width: 35,
                         ),
                         SizedBox(width: 150),
                         SvgPicture.asset(
-                          'assets/notification_icon.svg',
+                          'assets/Icons/notification_icon.svg',
                         ),
                       ],
                     )
