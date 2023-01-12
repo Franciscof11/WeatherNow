@@ -2,29 +2,28 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:lottie/lottie.dart';
 
 import '../remove_glow_effect.dart';
+import 'home_page_text.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    const TextStyle style = TextStyle(
-      fontSize: 18,
-      fontWeight: FontWeight.w600,
-      color: Colors.white,
-      fontFamily: 'SFpro',
-    );
     return Scaffold(
       body: Container(
         height: double.infinity,
         decoration: BoxDecoration(
             gradient: LinearGradient(
           colors: [
-            Color.fromRGBO(8, 36, 79, 1),
+            Color.fromRGBO(41, 178, 221, 1),
+            Color.fromRGBO(51, 170, 221, 1),
+            Color.fromRGBO(45, 200, 234, 1),
+            /*      Color.fromRGBO(8, 36, 79, 1),
             Color.fromARGB(255, 15, 63, 151),
-            Color.fromRGBO(11, 66, 171, 1),
+            Color.fromRGBO(11, 66, 171, 1), */
           ],
           begin: Alignment.topCenter,
           end: Alignment.bottomRight,
@@ -43,9 +42,10 @@ class HomePage extends StatelessWidget {
                         SizedBox(width: 25),
                         SvgPicture.asset('assets/Icons/location_icon.svg'),
                         SizedBox(width: 8),
-                        Text(
-                          'Maranhão',
-                          style: style,
+                        HomePageText(
+                          data: 'Maranhão',
+                          fontSize: 18,
+                          fontWeight: FontWeight.w600,
                         ),
                         SizedBox(width: 2),
                         SvgPicture.asset(
@@ -53,12 +53,29 @@ class HomePage extends StatelessWidget {
                           width: 35,
                         ),
                         SizedBox(width: 150),
-                        SvgPicture.asset('assets/Icons/notification_icon.svg'),
+                        SvgPicture.asset(
+                            'assets/Icons/has_notification_icon.svg'),
                       ],
                     ),
                     SizedBox(height: 40),
-                    SvgPicture.asset('assets/Images/sun_cloud.svg'),
-                    SizedBox(height: 40),
+                    Lottie.network(
+                        'https://assets5.lottiefiles.com/temp/lf20_HflU56.json'),
+                    SizedBox(height: 25),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 8),
+                      child: HomePageText(
+                        data: '30°',
+                        fontSize: 68,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    SizedBox(height: 10),
+                    HomePageText(
+                      data: 'Max.: 34ºc   Min.: 28ºc',
+                      fontSize: 18,
+                      fontWeight: FontWeight.w400,
+                    ),
+                    SizedBox(height: 10),
                   ],
                 ),
               ),
