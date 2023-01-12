@@ -1,10 +1,9 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
+import 'package:app/Views/HomePage/Widgets/home_page_text.dart';
 import 'package:app/Views/HomePage/Widgets/weather_hour_list_tile.dart';
 import 'package:app/Views/remove_glow_effect.dart';
 import 'package:flutter/material.dart';
-
-import 'second_text_home_page.dart';
 
 class _CurrentDayWidgetState extends State<CurrentDayWidget> {
   @override
@@ -24,18 +23,16 @@ class _CurrentDayWidgetState extends State<CurrentDayWidget> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                SecondTextHomePage(
+                HomePageText(
                   data: 'Hoje',
                   fontSize: 20,
-                  fontWeight: FontWeight.w500,
-                  fontStyle: FontStyle.italic,
+                  fontWeight: FontWeight.w400,
                 ),
                 SizedBox(width: 140),
-                SecondTextHomePage(
+                HomePageText(
                   data: '10 de Março',
                   fontSize: 18,
-                  fontWeight: FontWeight.w500,
-                  fontStyle: FontStyle.normal,
+                  fontWeight: FontWeight.w400,
                 )
               ],
             ),
