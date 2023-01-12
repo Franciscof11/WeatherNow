@@ -14,10 +14,9 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: SizedBox(
-        height: MediaQuery.of(context).size.height,
-        width: MediaQuery.of(context).size.width,
-        child: Container(
+      child: Container(
+          height: MediaQuery.of(context).size.height,
+          width: MediaQuery.of(context).size.width,
           decoration: BoxDecoration(
               gradient: LinearGradient(
             colors: [
@@ -25,18 +24,17 @@ class HomePage extends StatelessWidget {
               Color.fromRGBO(51, 170, 221, 1),
               Color.fromRGBO(45, 200, 234, 1),
               /*      Color.fromRGBO(8, 36, 79, 1),
-                Color.fromARGB(255, 15, 63, 151),
-                Color.fromRGBO(11, 66, 171, 1), */
+              Color.fromARGB(255, 15, 63, 151),
+              Color.fromRGBO(11, 66, 171, 1), */
             ],
             begin: Alignment.topCenter,
             end: Alignment.bottomRight,
           )),
-          child: ScrollConfiguration(
-            behavior: MyBehavior(),
+          child: RemoveGlowEffect(
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  SizedBox(height: 25),
+                  SizedBox(height: 20),
                   Row(
                     children: [
                       SizedBox(width: 25),
@@ -57,7 +55,7 @@ class HomePage extends StatelessWidget {
                           'assets/Icons/has_notification_icon.svg'),
                     ],
                   ),
-                  SizedBox(height: 15),
+                  SizedBox(height: 5),
                   Lottie.network(
                       'https://assets5.lottiefiles.com/temp/lf20_HflU56.json'),
                   SizedBox(height: 15),
@@ -83,9 +81,7 @@ class HomePage extends StatelessWidget {
                 ],
               ),
             ),
-          ),
-        ),
-      ),
+          )),
     );
   }
 }
