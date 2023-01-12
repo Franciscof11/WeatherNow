@@ -21,6 +21,7 @@ class HomePageText extends StatelessWidget {
         fontWeight: fontWeight,
         color: Colors.white,
         fontFamily: 'SFpro',
+        decoration: TextDecoration.none,
       ),
     );
   }
