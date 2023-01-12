@@ -33,3 +33,7 @@ flutter:
     - family: SFpro
       fonts:
         - asset: assets/fonts/font.OTF
+
+    - family: AbeeZee
+      fonts:
+        - asset: assets/fonts/ABeeZee_font.ttf

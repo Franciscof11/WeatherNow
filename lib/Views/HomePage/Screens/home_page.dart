@@ -58,7 +58,7 @@ class HomePage extends StatelessWidget {
                   SizedBox(height: 5),
                   Lottie.network(
                       'https://assets5.lottiefiles.com/temp/lf20_HflU56.json'),
-                  SizedBox(height: 15),
+                  SizedBox(height: 5),
                   Padding(
                     padding: const EdgeInsets.only(left: 8),
                     child: HomePageText(
