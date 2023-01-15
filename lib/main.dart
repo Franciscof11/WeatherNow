@@ -1,4 +1,4 @@
-import 'package:app/Routers/routes.dart';
+import 'package:app/Views/SplashScreen/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,10 +10,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
+    return const MaterialApp(
       title: 'Weather Now',
       debugShowCheckedModeBanner: false,
-      routerConfig: routes,
+      home: SplashScreen(),
     );
   }
 }
