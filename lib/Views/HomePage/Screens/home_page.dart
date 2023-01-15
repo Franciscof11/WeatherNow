@@ -1,7 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, avoid_print
 
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:lottie/lottie.dart';
 
 import '../../remove_glow_effect.dart';
@@ -30,9 +29,6 @@ class _HomePageState extends State<HomePage> {
                 Color.fromRGBO(41, 178, 221, 1),
                 Color.fromRGBO(51, 170, 221, 1),
                 Color.fromRGBO(45, 200, 234, 1),
-                /*      Color.fromRGBO(8, 36, 79, 1),
-                Color.fromARGB(255, 15, 63, 151),
-                Color.fromRGBO(11, 66, 171, 1), */
               ],
               begin: Alignment.topCenter,
               end: Alignment.bottomRight,
@@ -41,13 +37,11 @@ class _HomePageState extends State<HomePage> {
               child: SingleChildScrollView(
                 child: Column(
                   children: [
-                    SizedBox(height: 12),
+                    SizedBox(height: 20),
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         PickerCidade(),
-                        SizedBox(width: 60),
-                        SvgPicture.asset(
-                            'assets/Icons/has_notification_icon.svg'),
                       ],
                     ),
                     SizedBox(height: 5),
