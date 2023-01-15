@@ -1,11 +1,34 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
+import 'package:app/Views/HomePage/Widgets/Icon_weather.dart';
 import 'package:app/Views/HomePage/Widgets/second_text_home_page.dart';
 import 'package:flutter/material.dart';
 
 class _WeatherHourListTileState extends State<WeatherHourListTile> {
+  authWheater(weatherIcon) {
+    switch (weatherIcon) {
+      case 'sun':
+        return Image.asset('assets/Images/sun.gif');
+      case 'moon':
+        return Image.asset('assets/Images/moon.gif');
+      case 'cloud_and_moon':
+        return Image.asset('assets/Images/cloud_and_moon.gif');
+      case 'cloud_and_sun':
+        return Image.asset('assets/Images/cloud_and_sun.gif');
+      case 'cloudy':
+        return Image.asset('assets/Images/cloudy.gif');
+      case 'rain_and_sun':
+        return Image.asset('assets/Images/rain_and_sun.gif');
+      case 'rain':
+        return Image.asset('assets/Images/rain.gif');
+      case 'storm':
+        return Image.asset('assets/Images/storm.gif');
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
+    String weatherIcon = 'storm';
     return Container(
       height: 155,
       width: 70,
@@ -25,7 +48,7 @@ class _WeatherHourListTileState extends State<WeatherHourListTile> {
             fontStyle: FontStyle.normal,
           ),
           SizedBox(height: 10),
-          Image.asset('assets/Images/sun.gif'),
+          IconWeather(weatherIcon: authWheater(weatherIcon)),
           SizedBox(height: 10),
           SecondTextHomePage(
             data: '15:00',
