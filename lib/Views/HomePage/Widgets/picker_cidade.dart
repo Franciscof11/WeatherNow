@@ -19,22 +19,25 @@ class _PickerCidadeState extends State<PickerCidade> {
     'Sao Luis',
     'Fortaleza',
     'Brasília',
-    'Teste1',
-    'Teste2',
-    'Teste3',
-    'Teste4',
-    'Teste5',
+    'Rio de Janeiro',
+    'São Paulo',
+    'Belo Horizonte',
+    'Porto Alegre',
+    'Salvador',
+    'Natal',
+    'Manaus',
+    'Curitiba',
+    'Florianopólis'
   ];
   String? selectedValue;
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(left: 100),
-      child: Container(
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(15),
-        ),
+    return Container(
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(15),
+      ),
+      child: DropdownButtonHideUnderline(
         child: DropdownButton2(
           isExpanded: true,
           hint: Row(
@@ -42,7 +45,7 @@ class _PickerCidadeState extends State<PickerCidade> {
               SvgPicture.asset('assets/Icons/location_icon.svg',
                   color: Colors.lightBlue),
               SizedBox(
-                width: 8,
+                width: 10,
               ),
               Expanded(
                 child: Text(
@@ -54,7 +57,16 @@ class _PickerCidadeState extends State<PickerCidade> {
                     fontFamily: 'SFpro',
                     decoration: TextDecoration.none,
                   ),
+                  overflow: TextOverflow.ellipsis,
                 ),
+              ),
+              SvgPicture.asset(
+                'assets/Icons/dropdown_icon.svg',
+                color: Colors.lightBlue,
+                width: 40,
+              ),
+              SizedBox(
+                width: 15,
               ),
             ],
           ),
@@ -77,8 +89,17 @@ class _PickerCidadeState extends State<PickerCidade> {
                               color: Colors.blue,
                               fontFamily: 'SFpro',
                               decoration: TextDecoration.none,
+                              overflow: TextOverflow.ellipsis,
                             ),
                           ),
+                        ),
+                        SvgPicture.asset(
+                          'assets/Icons/dropdown_icon.svg',
+                          color: Colors.lightBlue,
+                          width: 40,
+                        ),
+                        SizedBox(
+                          width: 15,
                         ),
                       ],
                     ),
@@ -91,22 +112,16 @@ class _PickerCidadeState extends State<PickerCidade> {
               getClimaAtual();
             });
           },
-          icon: SvgPicture.asset(
-            'assets/Icons/dropdown_icon.svg',
-            width: 35,
-          ),
-          iconSize: 14,
-          buttonHeight: 46,
-          buttonWidth: 180,
+          iconSize: 0,
+          buttonHeight: 60,
+          dropdownDirection: DropdownDirection.left,
+          buttonWidth: 300,
           buttonPadding: const EdgeInsets.only(left: 32),
           buttonElevation: 2,
           itemHeight: 40,
-          autofocus: true,
-          dropdownDirection: DropdownDirection.left,
           itemPadding: const EdgeInsets.only(left: 14, right: 14),
           dropdownMaxHeight: 130,
-          dropdownWidth: 140,
-          dropdownPadding: null,
+          dropdownWidth: 260,
           dropdownDecoration: BoxDecoration(
             borderRadius: BorderRadius.circular(14),
           ),
