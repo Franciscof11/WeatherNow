@@ -28,7 +28,7 @@ class _WeatherHourListTileState extends State<WeatherHourListTile> {
 
   @override
   Widget build(BuildContext context) {
-    String weatherIcon = 'storm';
+    String weatherIcon = widget.weatherIcon;
     return Container(
       height: 155,
       width: 70,
@@ -63,7 +63,8 @@ class _WeatherHourListTileState extends State<WeatherHourListTile> {
 }
 
 class WeatherHourListTile extends StatefulWidget {
-  const WeatherHourListTile({super.key});
+  final String weatherIcon;
+  const WeatherHourListTile({super.key, required this.weatherIcon});
 
   @override
   State<WeatherHourListTile> createState() => _WeatherHourListTileState();
