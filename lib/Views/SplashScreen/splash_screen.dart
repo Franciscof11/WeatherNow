@@ -14,11 +14,15 @@ class SplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return AnimatedSplashScreen(
         splash: Lottie.network(
-            'https://assets2.lottiefiles.com/packages/lf20_3PNLts.json'),
+            'https://assets3.lottiefiles.com/packages/lf20_h8iveK.json'),
         pageTransitionType: PageTransitionType.fade,
         splashTransition: SplashTransition.fadeTransition,
-        animationDuration: Duration(seconds: 3),
+        animationDuration: Duration(seconds: 1),
+        duration: 4600,
+        backgroundColor: Color.fromRGBO(44, 46, 56, 1),
+        splashIconSize: 1000,
         nextScreen: MaterialApp.router(
+          debugShowCheckedModeBanner: false,
           routerConfig: routes,
         ));
   }
