@@ -1,20 +1,12 @@
 // ignore_for_file: prefer_const_constructors, avoid_print
 
-import 'package:dio/dio.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class _PickerCidadeState extends State<PickerCidade> {
-  getClimaAtual() async {
-    final client = Dio(
-      BaseOptions(baseUrl: 'http://api.weatherapi.com/v1/'),
-    );
-    final response = await client
-        .get('current.json?key=0b7f509ff46c4700961134501231401&q=Sao Luis');
-    print(response.data);
-  }
+import '../../../Services/getters.dart';
 
+class _PickerCidadeState extends State<PickerCidade> {
   final List<String> items = [
     'Sao Luis',
     'Fortaleza',
@@ -109,7 +101,7 @@ class _PickerCidadeState extends State<PickerCidade> {
           onChanged: (value) {
             setState(() {
               selectedValue = value;
-              getClimaAtual();
+              getCurrentWeather(selectedValue);
             });
           },
           iconSize: 0,
