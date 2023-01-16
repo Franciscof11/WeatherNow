@@ -1,10 +1,10 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, avoid_print
 
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
 
 import '../../remove_glow_effect.dart';
 import '../Widgets/current_day_widget.dart';
+import '../Widgets/current_weather_animation.dart';
 import '../Widgets/home_page_text.dart';
 import '../Widgets/picker_cidade.dart';
 
@@ -45,8 +45,7 @@ class _HomePageState extends State<HomePage> {
                       ],
                     ),
                     SizedBox(height: 5),
-                    Lottie.network(
-                        'https://assets5.lottiefiles.com/temp/lf20_HflU56.json'),
+                    CurrentWeatherAnimation(weatherAnimation: 'storm'),
                     SizedBox(height: 5),
                     Padding(
                       padding: const EdgeInsets.only(left: 8),
