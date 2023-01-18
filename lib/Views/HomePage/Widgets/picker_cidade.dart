@@ -19,7 +19,7 @@ class _PickerCidadeState extends State<PickerCidade> {
     'Natal',
     'Manaus',
     'Curitiba',
-    'Florianopólis'
+    'Florianopolis'
   ];
   String? selectedValue;
   @override

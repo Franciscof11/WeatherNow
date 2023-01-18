@@ -15,7 +15,7 @@ class SplashScreen extends StatelessWidget {
         splash: Image.asset('assets/Images/splash.gif'),
         pageTransitionType: PageTransitionType.fade,
         splashTransition: SplashTransition.fadeTransition,
-        duration: 5500,
+        duration: 4200,
         backgroundColor: Color.fromRGBO(228, 240, 246, 1),
         splashIconSize: 80000,
         nextScreen: MaterialApp.router(

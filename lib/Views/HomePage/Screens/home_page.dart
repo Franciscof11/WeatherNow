@@ -8,13 +8,6 @@ import '../Widgets/current_weather_animation.dart';
 import '../Widgets/home_page_text.dart';
 import '../Widgets/picker_cidade.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
-
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
@@ -50,14 +43,14 @@ class _HomePageState extends State<HomePage> {
                     Padding(
                       padding: const EdgeInsets.only(left: 8),
                       child: HomePageText(
-                        data: '30°',
+                        data: 'yºc',
                         fontSize: 68,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
                     SizedBox(height: 5),
                     HomePageText(
-                      data: 'Max.: 34ºc   Min.: 28ºc',
+                      data: 'Sensação Térmica: xºc',
                       fontSize: 18,
                       fontWeight: FontWeight.w400,
                     ),
@@ -73,4 +66,10 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
+}
+
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+  @override
+  State<HomePage> createState() => _HomePageState();
 }
