@@ -38,7 +38,7 @@ class _HomePageState extends State<HomePage> {
                       ],
                     ),
                     SizedBox(height: 5),
-                    CurrentWeatherAnimation(weatherAnimation: 'storm'),
+                    CurrentWeatherAnimation(weatherAnimation: 'cloud_and_sun'),
                     SizedBox(height: 5),
                     Padding(
                       padding: const EdgeInsets.only(left: 8),
