@@ -1,6 +1,6 @@
-// ignore_for_file: avoid_print, unused_local_variable
+// ignore_for_file: avoid_print
 
-import 'package:app/Services/api.dart';
+import 'package:app/controller/api.dart';
 import 'package:dio/dio.dart';
 
 getCurrentWeather(String? local) async {

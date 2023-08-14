@@ -4,7 +4,7 @@ import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../Services/getters.dart';
+import '../../../controller/weather_repository.dart';
 
 class _PickerCidadeState extends State<PickerCidade> {
   final List<String> items = [

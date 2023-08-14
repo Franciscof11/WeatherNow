@@ -1,8 +1,9 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
-import 'package:app/Views/HomePage/Widgets/icon_weather.dart';
-import 'package:app/Views/HomePage/Widgets/second_text_home_page.dart';
 import 'package:flutter/material.dart';
+
+import 'Icon_weather.dart';
+import 'second_text_home_page.dart';
 
 class _WeatherHourListTileState extends State<WeatherHourListTile> {
   authWheater(weatherIcon) {

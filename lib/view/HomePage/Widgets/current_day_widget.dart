@@ -1,8 +1,8 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, unused_element, unused_local_variable, non_constant_identifier_names
 
-import 'package:app/Views/HomePage/Widgets/home_page_text.dart';
-import 'package:app/Views/HomePage/Widgets/weather_hour_list_tile.dart';
-import 'package:app/Views/remove_glow_effect.dart';
+import 'package:app/view/HomePage/Widgets/home_page_text.dart';
+import 'package:app/view/HomePage/Widgets/weather_hour_list_tile.dart';
+import 'package:app/view/remove_glow_effect.dart';
 import 'package:flutter/material.dart';
 
 class _CurrentDayWidgetState extends State<CurrentDayWidget> {
