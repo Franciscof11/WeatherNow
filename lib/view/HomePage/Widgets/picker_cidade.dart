@@ -1,10 +1,9 @@
 // ignore_for_file: prefer_const_constructors, avoid_print
 
+import 'package:app/controller/weather_repository.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-
-import '../../../controller/weather_repository.dart';
 
 class _PickerCidadeState extends State<PickerCidade> {
   final List<String> items = [
@@ -101,7 +100,7 @@ class _PickerCidadeState extends State<PickerCidade> {
           onChanged: (value) {
             setState(() {
               selectedValue = value;
-              getCurrentWeather(selectedValue);
+              WeatherRepository().getCurrentWeather(selectedValue);
             });
           },
           iconSize: 0,
