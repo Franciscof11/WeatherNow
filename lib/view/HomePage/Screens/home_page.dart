@@ -56,15 +56,24 @@ class HomePage extends ConsumerWidget {
                         onTap: () {},
                         child: weather.when(
                           data: (data) {
-                            return HomePageText(
-                              data: '${data.current.temperature} ºc',
-                              fontSize: 68,
-                              fontWeight: FontWeight.w600,
+                            return GestureDetector(
+                              onTap: () async {
+                                final repo = WeatherRepository();
+                                final weather =
+                                    await repo.getCurrentWeather('Sao Paulo');
+                                print('----------------------------');
+                                print(weather.current?.tempC);
+                              },
+                              child: HomePageText(
+                                data: '22ºc',
+                                fontSize: 68,
+                                fontWeight: FontWeight.w600,
+                              ),
                             );
                           },
                           error: (erro, _) {
                             return HomePageText(
-                              data: '$erro',
+                              data: 'ih rpz',
                               fontSize: 68,
                               fontWeight: FontWeight.w600,
                             );
@@ -78,7 +87,7 @@ class HomePage extends ConsumerWidget {
                     SizedBox(height: 5),
                     HomePageText(
                       data: weather.when(data: (data) {
-                        return '${data.sensaTermica}';
+                        return '/* {data.current.sensaTermica} */';
                       }, error: (erro, _) {
                         return '$erro';
                       }, loading: () {

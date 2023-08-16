@@ -11,16 +11,10 @@ final apiServiceProvider =
 class WeatherRepository {
   Future<WeatherDTO> getCurrentWeather(String? local) async {
     try {
-      final client = Dio(
-        BaseOptions(baseUrl: Api.base),
-      );
       final response =
-          await client.get(Api.getClimaAtual, queryParameters: {'q': local});
-
-      final resp = response.data;
-      print('aaaaaaaaaaaaaaaaaaaaaaa');
-      print(resp);
-      return WeatherDTO.fromMap(resp);
+          await Dio().get(Api.getClimaAtual, queryParameters: {'q': local});
+      print(response.data);
+      return WeatherDTO.fromMap(response.data);
     } catch (e) {
       throw Exception('Erro: $e');
     }
