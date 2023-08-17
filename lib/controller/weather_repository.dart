@@ -1,7 +1,7 @@
 // ignore_for_file: avoid_print
 
 import 'package:app/controller/api.dart';
-import 'package:app/model/weather_dto.dart';
+import 'package:app/model/weather.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -9,12 +9,12 @@ final apiServiceProvider =
     Provider<WeatherRepository>((ref) => WeatherRepository());
 
 class WeatherRepository {
-  Future<WeatherDTO> getCurrentWeather(String? local) async {
+  Future<Weather> getCurrentWeather(String? local) async {
     try {
       final response =
           await Dio().get(Api.getClimaAtual, queryParameters: {'q': local});
       print(response.data);
-      return WeatherDTO.fromMap(response.data);
+      return Weather.fromMap(response.data);
     } catch (e) {
       throw Exception('Erro: $e');
     }

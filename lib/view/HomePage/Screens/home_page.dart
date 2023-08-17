@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, avoid_print
 
 import 'package:app/controller/weather_repository.dart';
-import 'package:app/model/weather_dto.dart';
+import 'package:app/model/weather.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -11,7 +11,7 @@ import '../Widgets/current_weather_animation.dart';
 import '../Widgets/home_page_text.dart';
 import '../Widgets/picker_cidade.dart';
 
-final weatherProvider = FutureProvider<WeatherDTO>((ref) async {
+final weatherProvider = FutureProvider<Weather>((ref) async {
   final apiService = ref.watch(apiServiceProvider);
   return apiService.getCurrentWeather('Sao Paulo');
 });
@@ -73,7 +73,7 @@ class HomePage extends ConsumerWidget {
                           },
                           error: (erro, _) {
                             return HomePageText(
-                              data: 'ih rpz',
+                              data: 'erro',
                               fontSize: 68,
                               fontWeight: FontWeight.w600,
                             );
@@ -87,9 +87,9 @@ class HomePage extends ConsumerWidget {
                     SizedBox(height: 5),
                     HomePageText(
                       data: weather.when(data: (data) {
-                        return '/* {data.current.sensaTermica} */';
+                        return 'a' /* {data.current.sensaTermica} */;
                       }, error: (erro, _) {
-                        return '$erro';
+                        return 'a';
                       }, loading: () {
                         return 'Carregando...';
                       }),

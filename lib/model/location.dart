@@ -1,4 +1,4 @@
-class LocationDTO {
+class Location {
   final String name;
   final String region;
   final String country;
@@ -8,7 +8,7 @@ class LocationDTO {
   final num localtimeEpoch;
   final String localtime;
 
-  LocationDTO({
+  Location({
     required this.name,
     required this.region,
     required this.country,
@@ -19,8 +19,8 @@ class LocationDTO {
     required this.localtimeEpoch,
   });
 
-  factory LocationDTO.fromMap(Map<String, dynamic> map) {
-    return LocationDTO(
+  factory Location.fromMap(Map<String, dynamic> map) {
+    return Location(
       name: map['name'] ?? '',
       region: map['region'] ?? '',
       country: map['country'] ?? '',
